@@ -1,6 +1,8 @@
+import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 import Imagesec from './FirstpageComponent/Imagesetion';
+import Contentsection from './FirstpageComponent/Contentsection';
 
 const Firstpagediv = styled.div`
     position:relative;
@@ -12,18 +14,20 @@ const Firstpagediv = styled.div`
     align-content:center;
     
     width:100vw;
-    height:210vh;
+    height:250vh;
     box-sizing:border-box;
 
     background-color: black;
-
-
 `;
 
 function Firstpage(){
+    useEffect(()=>{
+
+    },[]);
     return(
         <Firstpagediv>
             <Imagesec/>
+            <Contentsection/>
         </Firstpagediv>
     );   
 }

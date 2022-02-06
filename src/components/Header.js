@@ -14,7 +14,7 @@ const Styledheader = styled.header`
     padding:15px;
     box-sizing: border-box;
 
-    background-color:black;
+    background-color:rgba(0,0,0,0);
 
     display:flex;
     flex-direction:row;
