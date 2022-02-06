@@ -7,10 +7,10 @@ const Styledcontent = styled.div`
     font-size:28px;
 
     position: relative;
-    top:150px;
+    top:${(props)=>props.stylecss.Styledcontent_top};
     transition: top 2s ease-in 0.5s, opacity 2s ease-in 1s;    
 
-    opacity:0;
+    opacity:${(props)=>props.stylecss.Styledcontent_opacity};
 
     div{
         margin-bottom:1rem;
@@ -35,8 +35,7 @@ const Styledcontent = styled.div`
 
             display: inline-block;
             background-color:white;
-    
-            width:0px;
+            width:${(props)=>props.stylecss.spanbackground_width};
             height:100%;
 
             transition: width 0.5s ease-in-out 3s;
@@ -45,7 +44,7 @@ const Styledcontent = styled.div`
             position:relative;
             z-index:9999;
             font-weight:900;
-            color:white;
+            color:${(props)=>props.stylecss.spanword_color};
 
             transition: color 0.5s ease-in-out 3s;
         }
@@ -68,20 +67,25 @@ const Styledbutton = styled.div`
 
 
 function Contentsection(){
-    useEffect(()=>{
-        const styledcontent = document.querySelector('.styledcontent');
-        styledcontent.style.top =0;
-        styledcontent.style.opacity =1;
-  
-        const spanbackground = document.querySelector('.spanbackground');
-        spanbackground.style.width ='100%';
+    const [_Styledcontentcss, setStyledcontentcss] = useState({
+        Styledcontent_top:"150px",
+        Styledcontent_opacity:0,
+        spanbackground_width:0,
+        spanword_color:'white',
+    });
 
-        const spanword = document.querySelector('.span span');
-        spanword.style.color= 'black';
+    
+    useEffect(()=>{
+        setStyledcontentcss({
+            Styledcontent_top:0,
+            Styledcontent_opacity:1,
+            spanbackground_width:'100%',
+            spanword_color:'black',
+        });
     },[]);
 
     return(
-        <Styledcontent className='styledcontent'>
+        <Styledcontent stylecss={_Styledcontentcss}>
             <div>모두의 안녕을 위해 행동하는 생활밀착형 SOCIAL BRAND</div> 
             <div>우리는 
                 <div className='span'>
@@ -90,7 +94,7 @@ function Contentsection(){
                 </div>
                 입니다.
             </div> 
-            <Styledbutton>BRAND STORY ></Styledbutton>
+            <Styledbutton>BRAND STORY &gt;</Styledbutton>
         </Styledcontent>
     )
 }
