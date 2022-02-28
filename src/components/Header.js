@@ -9,9 +9,9 @@ const Styledheader = styled.header`
     z-index: 9999;
     
     width:100vw;
-    height:25vh;
+    height:20vh; max-height:8rem;
     
-    padding:15px;
+    margin:1rem;
     box-sizing: border-box;
 
     background-color:rgba(0,0,0,0);

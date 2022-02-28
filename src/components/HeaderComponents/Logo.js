@@ -3,9 +3,9 @@ import styled from 'styled-components';
 const Logodiv = styled.div`
     position: relative;
     
-    width:8rem;
+    width:6rem;
 
-    margin-left:30px;
+    margin-left:3rem;
 
     display: flex;
     flex-direction: column;
@@ -16,7 +16,7 @@ const Logodiv = styled.div`
 const Hellodiv = styled.div`
     font-weight:900;
     color:white;
-    font-size:32px;
+    font-size:1.5rem;
 `;
 
 const Projectdiv = styled.div`
@@ -25,15 +25,14 @@ const Projectdiv = styled.div`
     
     padding:3px 0;
 
-    font-size:20px;
+    font-size:1rem;
     font-weight:550;
-    color:black;
     text-align:center;
 `;
 
 const Spotdiv = styled.div`
-    width : 18px;
-    height: 18px;
+    width : 1rem;
+    height: 1rem;
     border-radius: 50%;
     background-color:white;
     margin-top:5px;

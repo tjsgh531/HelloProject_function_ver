@@ -5,9 +5,8 @@ const Stylednav = styled.nav`
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
  
-    column-gap: 2rem;
-    margin-right:30px;
-
+    column-gap: 1rem;
+    margin-right:5rem;
 `;
 
 const Stylednavitem = styled.div`
@@ -16,14 +15,13 @@ const Stylednavitem = styled.div`
 
     background-color:white;
 
-    color:black;
-    font-weight:550;
+    font-weight:500;
+    font-size:0.8rem
     letter-spacing: 1.5px;
     text-align:center;
 
     cursor: pointer;
-    
-`
+`;
 
 function Nav(){
     return(
